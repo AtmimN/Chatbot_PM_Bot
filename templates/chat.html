@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{ theme.name }} &middot; PM-Bot{% endblock %}
+{% block color %}{{ theme.color }}{% endblock %}
+
+{% block header_extra %}
+<div class="header-actions">
+  <a class="btn-ghost" href="{{ url_for('admin_page', theme_id=theme.id) }}">Statistik</a>
+  <button id="btn-clear" class="btn-ghost" type="button">Hapus Riwayat</button>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="chat-card">
+  <div class="chat-header">
+    <div class="avatar">{{ theme.avatar }}</div>
+    <div class="chat-title">
+      <h1>{{ theme.bot_name }}</h1>
+      <p>{{ theme.name }}</p>
+    </div>
+    <label class="learn-toggle">
+      <input type="checkbox" id="learn-mode">
+      <span>Mode Belajar</span>
+    </label>
+  </div>
+
+  <!-- Area pesan interaktif -->
+  <div id="messages" class="messages" aria-live="polite"></div>
+
+  <!-- Tombol saran pertanyaan cepat -->
+  <div class="suggestions">
+    {% for s in theme.suggestions %}
+    <button type="button" class="chip">{{ s }}</button>
+    {% endfor %}
+  </div>
+
+  <!-- Form pengiriman pesan -->
+  <form id="chat-form" class="chat-form" autocomplete="off">
+    <label for="chat-input" class="sr-only">Tulis pertanyaan Anda</label>
+    <input
+      id="chat-input"
+      type="text"
+      placeholder="Ketik pertanyaan seputar manajemen proyek..."
+      maxlength="500"
+      required
+    >
+    <button type="submit" id="btn-submit">Kirim</button>
+  </form>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<!-- Data tema disimpan dalam format JSON murni agar linter editor tidak mendeteksi syntax error -->
+<script id="theme-data" type="application/json">
+  {{ {"id": theme.id, "avatar": theme.avatar, "greeting": theme.greeting} | tojson }}
+</script>
+<script>
+  // Parsing data tema ke dalam objek global THEME untuk digunakan oleh chat.js
+  const THEME = JSON.parse(document.getElementById("theme-data").textContent);
+</script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}
+

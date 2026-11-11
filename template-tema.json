@@ -1,0 +1,47 @@
+{
+  "id": "ganti_id_tema",
+  "name": "Nama Tema Anda",
+  "bot_name": "NamaBot",
+  "avatar": "🤖",
+  "color": "#0f766e",
+  "description": "Satu kalimat yang menjelaskan apa yang bisa dijawab bot ini.",
+  "greeting": "Halo! Saya NamaBot. Tanyakan tentang teori atau topik yang relevan.",
+  "suggestions": [
+    "Pertanyaan contoh 1",
+    "Pertanyaan contoh 2",
+    "Pertanyaan contoh 3"
+  ],
+  "fallback": [
+    "Maaf, saya belum memahami pertanyaan itu. Coba gunakan kata kunci lain.",
+    "Pertanyaan tersebut belum tersedia dalam basis pengetahuan saya."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "hai",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore"
+      ],
+      "responses": [
+        "Halo! Ada yang bisa {nama_bot} bantu hari ini?",
+        "Hai! Silakan tanyakan materi atau topik yang ingin dipelajari."
+      ]
+    },
+    {
+      "tag": "contoh_topik",
+      "patterns": [
+        "apa itu topik ini",
+        "jelaskan tentang topik",
+        "cara belajar topik"
+      ],
+      "responses": [
+        "Topik ini membahas tentang konsep dasar yang sedang dipelajari.",
+        "Berikut ringkasan penting mengenai topik ini."
+      ]
+    }
+  ]
+}
+

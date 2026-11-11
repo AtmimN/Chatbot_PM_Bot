@@ -1,0 +1,375 @@
+{
+  "id": "pm_bot",
+  "name": "Asisten Dasar Manajemen Proyek",
+  "bot_name": "PM-Bot",
+  "avatar": "📋",
+  "color": "#0f766e",
+  "description": "Belajar teori dasar manajemen proyek: fase proyek, Agile/Waterfall, peran tim, template dokumen, tools, dan istilah penting.",
+  "greeting": "Halo! Saya PM-Bot. Tanya soal fase proyek, metodologi (Agile/Waterfall), peran tim, template, tools, atau istilah proyek. Ketik \"menu\" untuk daftar topik.",
+  "suggestions": [
+    "Apa itu Agile?",
+    "Tahapan proyek",
+    "Beda PM dan Product Owner",
+    "Contoh WBS",
+    "Rekomendasi tools proyek"
+  ],
+  "fallback": [
+    "Maaf, saya belum paham pertanyaanmu. Coba tanya soal fase proyek, Agile/Waterfall, peran tim, template, tools, atau istilah proyek. Ketik \"menu\" untuk daftar topik.",
+    "Hmm, itu di luar topik yang saya kuasai. Saya fokus pada dasar manajemen proyek. Ketik \"menu\" untuk melihat daftar topik."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "hai",
+        "hi",
+        "hello",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "permisi",
+        "halo bot"
+      ],
+      "responses": [
+        "Halo! Saya {nama_bot}, asisten teori dasar manajemen proyek. Kamu bisa tanya soal fase proyek, Agile/Waterfall, peran tim, template, tools, atau istilah proyek. Ketik \"menu\" untuk melihat daftar topik.",
+        "Hai! {nama_bot} di sini. Mau belajar apa soal manajemen proyek hari ini? Ketik \"menu\" kalau butuh daftar topik."
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "menu",
+        "bantuan",
+        "help",
+        "mulai",
+        "start",
+        "apa saja yang bisa ditanyakan",
+        "kamu bisa apa",
+        "topik apa saja",
+        "daftar topik",
+        "fitur apa saja"
+      ],
+      "responses": [
+        "Aku bisa membantu dengan topik berikut:\n• Fase proyek (contoh: \"tahapan proyek\")\n• Metodologi (contoh: \"apa itu agile\", \"beda waterfall dan agile\")\n• Peran & tugas (contoh: \"tugas scrum master\")\n• Template dokumen (contoh: \"contoh WBS\")\n• Tools (contoh: \"rekomendasi software proyek\")\n• Istilah (contoh: \"apa itu scope creep\")\nTinggal ketik pertanyaanmu, ya!"
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "terima kasih",
+        "makasih",
+        "thanks",
+        "thank you",
+        "thx",
+        "terimakasih banyak",
+        "oke makasih",
+        "mantap makasih"
+      ],
+      "responses": [
+        "Sama-sama! Ada topik manajemen proyek lain yang ingin kamu tanyakan? Ketik \"menu\" untuk daftar topik.",
+        "Senang bisa membantu! Kalau ada pertanyaan lain, tinggal tanya."
+      ]
+    },
+    {
+      "tag": "perpisahan",
+      "patterns": [
+        "dadah",
+        "bye",
+        "sampai jumpa",
+        "sampai ketemu lagi",
+        "selamat tinggal",
+        "sudah cukup",
+        "cukup sekian",
+        "pamit dulu"
+      ],
+      "responses": [
+        "Sampai jumpa! Semoga sukses dengan proyekmu.",
+        "Dadah! Kembali lagi kapan saja kalau butuh bantuan soal manajemen proyek."
+      ]
+    },
+    {
+      "tag": "fase_proyek",
+      "patterns": [
+        "tahapan proyek",
+        "fase manajemen proyek",
+        "langkah bikin proyek",
+        "tahap tahap proyek",
+        "fase fase proyek",
+        "siklus hidup proyek",
+        "pmbok proses proyek",
+        "ada berapa fase proyek",
+        "lima fase proyek"
+      ],
+      "responses": [
+        "Menurut PMBOK Guide (edisi ke-6), manajemen proyek dibagi menjadi 5 kelompok proses (sering disebut fase):\n1. Initiation (Inisiasi): menetapkan tujuan dan memulai proyek\n2. Planning (Perencanaan): menyusun lingkup, jadwal, biaya, dan risiko\n3. Execution (Pelaksanaan): mengerjakan sesuai rencana\n4. Monitoring & Controlling (Pemantauan & Pengendalian): memantau progres dan mengendalikan perubahan\n5. Closing (Penutupan): menyelesaikan proyek dan serah terima\nCatatan: edisi PMBOK yang lebih baru menggeser penekanan ke prinsip dan performance domain."
+      ]
+    },
+    {
+      "tag": "apa_itu_waterfall",
+      "patterns": [
+        "apa itu waterfall",
+        "waterfall itu apa",
+        "metode waterfall",
+        "model waterfall",
+        "model air terjun",
+        "jelaskan waterfall",
+        "pengertian waterfall"
+      ],
+      "responses": [
+        "Waterfall adalah metode yang berurutan (linier): tiap tahap (kebutuhan, desain, implementasi, pengujian, peluncuran) harus selesai dulu sebelum lanjut ke tahap berikutnya. Cocok jika scope proyek sudah pasti dan jarang berubah."
+      ]
+    },
+    {
+      "tag": "apa_itu_agile",
+      "patterns": [
+        "apa itu agile",
+        "agile itu apa",
+        "metode agile",
+        "jelaskan agile",
+        "pengertian agile",
+        "apa itu metode agile",
+        "pengembangan tangkas",
+        "agile manifesto"
+      ],
+      "responses": [
+        "Agile adalah pendekatan yang fleksibel dan iteratif (berulang): proyek dikerjakan dalam siklus pendek, hasilnya diperiksa berkala, dan perubahan kebutuhan bisa diakomodasi. Cocok untuk proyek yang dinamis."
+      ]
+    },
+    {
+      "tag": "apa_itu_scrum",
+      "patterns": [
+        "apa itu scrum",
+        "scrum itu apa",
+        "metode scrum",
+        "framework scrum",
+        "jelaskan scrum",
+        "pengertian scrum",
+        "apa itu sprint",
+        "sprint itu apa"
+      ],
+      "responses": [
+        "Scrum adalah salah satu framework Agile yang membagi pekerjaan dalam periode singkat bernama Sprint (umumnya 1-4 minggu). Di akhir tiap Sprint, tim menghasilkan hasil kerja yang bisa diperiksa. Perannya: Product Owner, Scrum Master, dan Developers."
+      ]
+    },
+    {
+      "tag": "waterfall_vs_agile",
+      "patterns": [
+        "beda waterfall dan agile",
+        "bedanya agile dan waterfall",
+        "perbedaan agile dengan waterfall",
+        "agile vs waterfall",
+        "waterfall vs agile",
+        "mana yang lebih baik agile atau waterfall",
+        "bandingkan agile dan waterfall",
+        "pilih agile atau waterfall"
+      ],
+      "responses": [
+        "Waterfall: berurutan/linier, perubahan sulit setelah tahap selesai, hasil dikirim di akhir. Cocok jika scope sudah pasti.\nAgile: iteratif, perubahan diterima di tiap siklus, hasil dikirim bertahap. Cocok untuk proyek dinamis.\nIntinya: pilih Waterfall bila kebutuhan stabil, pilih Agile bila kebutuhan sering berubah."
+      ]
+    },
+    {
+      "tag": "tugas_project_manager",
+      "patterns": [
+        "apa tugas pm",
+        "tugas project manager",
+        "peran project manager",
+        "tugas manajer proyek",
+        "project manager itu apa",
+        "apa itu project manager",
+        "apa yang dikerjakan project manager",
+        "tanggung jawab pm"
+      ],
+      "responses": [
+        "Project Manager bertanggung jawab atas anggaran, jadwal, dan tim: merencanakan proyek, membagi tugas, memantau progres, mengelola risiko, dan berkomunikasi dengan stakeholder agar proyek selesai sesuai tujuan."
+      ]
+    },
+    {
+      "tag": "tugas_product_owner",
+      "patterns": [
+        "tugas product owner",
+        "apa itu product owner",
+        "peran product owner",
+        "apa tugas po",
+        "product owner itu apa",
+        "tanggung jawab product owner",
+        "tanggung jawab po",
+        "siapa yang mengatur product backlog"
+      ],
+      "responses": [
+        "Product Owner mewakili klien/user dan memegang visi produk. Tugas utamanya mengelola dan memprioritaskan Product Backlog agar tim mengerjakan hal yang paling bernilai."
+      ]
+    },
+    {
+      "tag": "tugas_scrum_master",
+      "patterns": [
+        "tugas scrum master",
+        "apa itu scrum master",
+        "peran scrum master",
+        "apa tugas sm",
+        "scrum master itu apa",
+        "tanggung jawab scrum master",
+        "apakah scrum master itu manajer"
+      ],
+      "responses": [
+        "Scrum Master memfasilitasi tim Agile agar bekerja sesuai framework Scrum: memastikan event Scrum berjalan, membantu menghilangkan hambatan, dan membimbing tim. Scrum Master bukan atasan atau manajer proyek tim."
+      ]
+    },
+    {
+      "tag": "pm_vs_product_owner",
+      "patterns": [
+        "beda pm dan product owner",
+        "bedanya project manager dengan product owner",
+        "perbedaan pm dan po",
+        "pm vs product owner",
+        "project manager vs product owner",
+        "pm atau po",
+        "bandingkan project manager dan product owner",
+        "beda project manager sama po"
+      ],
+      "responses": [
+        "Project Manager: bertanggung jawab atas anggaran, jadwal, dan tim.\nProduct Owner: mewakili klien/user, memegang visi produk, dan menentukan prioritas pekerjaan.\nSingkatnya: PM mengurus bagaimana proyek dijalankan, PO menentukan apa yang paling bernilai untuk dibuat."
+      ]
+    },
+    {
+      "tag": "minta_template",
+      "patterns": [
+        "minta template",
+        "template apa saja",
+        "ada template apa",
+        "contoh dokumen proyek",
+        "dokumen proyek apa saja",
+        "minta contoh dokumen",
+        "download template",
+        "template manajemen proyek"
+      ],
+      "responses": [
+        "Template yang tersedia:\n• Project Charter\n• Work Breakdown Structure (WBS)\n• Risk Register\nTinggal ketik nama template-nya, misalnya \"project charter\" atau \"contoh WBS\"."
+      ]
+    },
+    {
+      "tag": "template_project_charter",
+      "patterns": [
+        "project charter",
+        "template project charter",
+        "contoh project charter",
+        "dokumen project charter",
+        "minta project charter",
+        "piagam proyek"
+      ],
+      "responses": [
+        "Project Charter adalah dokumen resmi yang mengesahkan proyek: berisi tujuan, ruang lingkup, stakeholder utama, anggaran, dan jadwal garis besar.\nUnduh template (Word): https://www.projectmanagementdocs.com/template/project-initiation/project-charter-multi-page-version/"
+      ]
+    },
+    {
+      "tag": "template_wbs",
+      "patterns": [
+        "contoh wbs",
+        "template wbs",
+        "work breakdown structure",
+        "minta wbs",
+        "download wbs",
+        "apa itu wbs",
+        "wbs itu apa",
+        "wbs"
+      ],
+      "responses": [
+        "WBS (Work Breakdown Structure) adalah pemecahan lingkup proyek menjadi bagian-bagian kerja yang lebih kecil dan terukur, supaya mudah direncanakan, dijadwalkan, dan dipantau.\nUnduh template (Excel): https://www.projectmanagementdocs.com/template/project-planning/work-breakdown-structure/"
+      ]
+    },
+    {
+      "tag": "template_risk_register",
+      "patterns": [
+        "risk register",
+        "template risk register",
+        "template risiko",
+        "daftar risiko proyek",
+        "contoh risk register",
+        "minta risk register",
+        "apa itu risk register",
+        "register risiko"
+      ],
+      "responses": [
+        "Risk Register adalah daftar risiko proyek beserta kemungkinan terjadinya, dampak, dan rencana penanganannya.\nUnduh template (Excel): https://www.projectmanagementdocs.com/template/project-planning/risk-register/"
+      ]
+    },
+    {
+      "tag": "rekomendasi_tools",
+      "patterns": [
+        "aplikasi untuk proyek",
+        "rekomendasi software",
+        "pakai tools apa",
+        "tools manajemen proyek",
+        "aplikasi manajemen proyek",
+        "software untuk project management",
+        "rekomendasi aplikasi proyek",
+        "rekomendasi tools proyek",
+        "tools apa yang bagus"
+      ],
+      "responses": [
+        "Rekomendasi sesuai kebutuhan:\n• Personal/tim kecil: Trello (berbasis Kanban)\n• Kolaborasi umum: Asana atau Monday.com\n• Pengembangan software (Agile): Jira"
+      ]
+    },
+    {
+      "tag": "scope_creep",
+      "patterns": [
+        "scope creep",
+        "apa itu scope creep",
+        "scope creep itu apa",
+        "penambahan fitur di luar rencana",
+        "pengertian scope creep",
+        "cara mencegah scope creep"
+      ],
+      "responses": [
+        "Scope creep adalah penambahan fitur atau tugas di luar rencana awal tanpa penyesuaian waktu dan biaya. Cara mencegahnya: tetapkan scope secara tertulis sejak awal dan gunakan proses persetujuan perubahan (change request)."
+      ]
+    },
+    {
+      "tag": "stakeholder",
+      "patterns": [
+        "stakeholder",
+        "apa itu stakeholder",
+        "stakeholder itu apa",
+        "pengertian stakeholder",
+        "pemangku kepentingan",
+        "siapa saja stakeholder proyek",
+        "contoh stakeholder"
+      ],
+      "responses": [
+        "Stakeholder adalah semua pihak yang memengaruhi atau terdampak oleh proyek, misalnya klien, sponsor, tim proyek, pengguna akhir, dan pemasok."
+      ]
+    },
+    {
+      "tag": "kpi",
+      "patterns": [
+        "kpi",
+        "apa itu kpi",
+        "kpi itu apa",
+        "pengertian kpi",
+        "key performance indicator",
+        "indikator kinerja utama",
+        "contoh kpi proyek"
+      ],
+      "responses": [
+        "KPI (Key Performance Indicator) adalah ukuran terukur untuk menilai apakah proyek atau tim mencapai tujuannya. Contoh di proyek: ketepatan jadwal, kesesuaian anggaran, tingkat kepuasan klien, dan jumlah bug yang ditemukan."
+      ]
+    },
+    {
+      "tag": "di_luar_cakupan",
+      "patterns": [
+        "hitungkan budget proyek",
+        "hitung anggaran proyek saya",
+        "berapa gaji pm",
+        "berapa gaji project manager",
+        "estimasi biaya proyek saya",
+        "buatkan jadwal proyek saya",
+        "tolong hitung biaya proyek",
+        "berapa lama proyek saya selesai"
+      ],
+      "responses": [
+        "Maaf, saya hanya diprogram untuk membagikan teori dasar dan template manajemen proyek, jadi belum bisa menghitung anggaran, jadwal, atau gaji. Ketik \"menu\" untuk melihat topik yang bisa saya bantu."
+      ]
+    }
+  ]
+}

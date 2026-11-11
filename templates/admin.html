@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Statistik {{ theme.name }} &middot; PM-Bot{% endblock %}
+{% block color %}{{ theme.color }}{% endblock %}
+
+{% block content %}
+<section class="admin">
+  <div class="admin-header">
+    <h1>{{ theme.avatar }} Statistik &middot; {{ theme.name }}</h1>
+    <p class="muted">
+      Evaluasi performa bot, frekuensi topik pertanyaan, dan temukan pertanyaan yang belum dikenali
+      untuk memperkaya pola pada berkas tema. Ambang batas aktif: <strong>{{ threshold }}</strong>.
+    </p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box">
+      <span class="stat-num">{{ summary.total }}</span>
+      <span class="stat-label">Total Pertanyaan</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">{{ summary.persen_dikenali }}%</span>
+      <span class="stat-label">Tingkat Dikenali</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">{{ summary.tidak_dikenali }}</span>
+      <span class="stat-label">Tidak Dikenali</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">{{ summary.sesi }}</span>
+      <span class="stat-label">Jumlah Sesi</span>
+    </div>
+  </div>
+
+  <div class="admin-section">
+    <h2>Distribusi Pertanyaan per Intent</h2>
+    {% if stats %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Intent</th>
+          <th>Jumlah</th>
+          <th>Proporsi</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for s in stats %}
+        <tr>
+          <td><code>{{ s.intent }}</code></td>
+          <td>{{ s.jumlah }}</td>
+          <td>
+            <div class="progress-bar">
+              <span style="width: {{ (100 * s.jumlah / summary.total) | round(1) }}%;"></span>
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="muted">Belum ada percakapan dengan intent teridentifikasi untuk tema ini.</p>
+    {% endif %}
+  </div>
+
+  <div class="admin-section">
+    <h2>Pertanyaan yang Belum Dikenali (Terbaru)</h2>
+    {% if unknown %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Teks Pertanyaan</th>
+          <th>Skor Tertinggi</th>
+          <th>Waktu</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for u in unknown %}
+        <tr>
+          <td>{{ u.text }}</td>
+          <td>{{ "%.2f" | format(u.score or 0) }}</td>
+          <td>{{ u.created_at }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="muted">Semua pertanyaan pengguna berhasil dikenali bot.</p>
+    {% endif %}
+  </div>
+
+  <div class="admin-footer">
+    <a href="{{ url_for('chat_page', theme_id=theme.id) }}" class="btn-primary">&larr; Kembali ke Percakapan</a>
+  </div>
+</section>
+{% endblock %}
+

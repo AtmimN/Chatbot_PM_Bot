@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}PM-Bot &middot; Asisten Manajemen Proyek{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="--primary: {% block color %}#0f766e{% endblock %};">
+  <header class="topbar">
+    <a href="{{ url_for('index') }}" class="brand">📋 PM-Bot</a>
+    {% block header_extra %}{% endblock %}
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <p>Praktikum Aplikasi Web &middot; Chatbot Tematik PM-Bot</p>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
+

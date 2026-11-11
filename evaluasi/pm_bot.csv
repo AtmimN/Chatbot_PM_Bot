@@ -1,0 +1,64 @@
+kalimat,intent
+"Halo selamat sore, bisa bantu?",salam
+"Hai, ada orang?",salam
+Menu apa saja yang tersedia?,menu
+"Aku butuh bantuan, mulai dari mana?",menu
+Makasih banyak ya!,terima_kasih
+Oke thanks bot,terima_kasih
+"Aku pamit dulu ya, dadah",perpisahan
+Sampai jumpa lagi ya,perpisahan
+Fase-fase dalam proyek apa saja?,fase_proyek
+Urutan tahapan manajemen proyek,fase_proyek
+Metode waterfall itu bagaimana?,apa_itu_waterfall
+Jelaskan model air terjun dalam proyek,apa_itu_waterfall
+Agile itu maksudnya apa sih?,apa_itu_agile
+Tolong jelaskan metode agile,apa_itu_agile
+Scrum itu apa sih?,apa_itu_scrum
+Sprint dalam scrum itu apa?,apa_itu_scrum
+Apa bedanya waterfall sama agile?,waterfall_vs_agile
+Lebih bagus agile atau waterfall?,waterfall_vs_agile
+Tugas seorang project manager apa saja?,tugas_project_manager
+Peran manajer proyek itu ngapain?,tugas_project_manager
+Product owner itu kerjanya apa?,tugas_product_owner
+Apa tanggung jawab seorang PO?,tugas_product_owner
+Scrum master bertugas apa dalam tim?,tugas_scrum_master
+Scrum master itu atasan tim bukan?,tugas_scrum_master
+Apa beda project manager dan product owner?,pm_vs_product_owner
+Perbedaan PM sama PO itu apa?,pm_vs_product_owner
+Ada template apa saja yang bisa diunduh?,minta_template
+Boleh minta contoh dokumen proyek?,minta_template
+Minta template project charter dong,template_project_charter
+Piagam proyek itu seperti apa contohnya?,template_project_charter
+Boleh minta contoh WBS?,template_wbs
+WBS itu apa sih?,template_wbs
+Minta template risk register,template_risk_register
+Contoh daftar risiko untuk proyek,template_risk_register
+Aplikasi apa yang cocok untuk kelola proyek?,rekomendasi_tools
+Sebaiknya pakai software apa untuk tim kecil?,rekomendasi_tools
+Scope creep itu apa artinya?,scope_creep
+Bagaimana cara menghindari scope creep?,scope_creep
+Stakeholder itu siapa saja?,stakeholder
+Apa arti stakeholder dalam proyek?,stakeholder
+KPI itu singkatan dari apa?,kpi
+Contoh KPI untuk proyek software,kpi
+Tolong hitung anggaran proyek aplikasi saya,di_luar_cakupan
+Gaji project manager di Indonesia berapa?,di_luar_cakupan
+Resep nasi goreng enak apa?,fallback
+Agile sama waterfall itu apa?,waterfall_vs_agile
+Waterfall dan agile bedanya di mana?,waterfall_vs_agile
+PM sama PO itu apa bedanya?,pm_vs_product_owner
+Project manager dan product owner itu sama nggak?,pm_vs_product_owner
+Tahapn proyek apa aja?,fase_proyek
+Apa itu agil?,apa_itu_agile
+Jelasin dong scrum,apa_itu_scrum
+Trello atau Jira lebih bagus?,rekomendasi_tools
+Siapa itu stakeholder?,stakeholder
+Pengertian risk register?,template_risk_register
+Proyek saya butuh dana berapa?,di_luar_cakupan
+Kenapa proyek sering molor?,fallback
+Bagaimana cara belajar python?,fallback
+Siapa juara piala dunia 2022?,fallback
+Cuaca hari ini bagaimana?,fallback
+Cara memperbaiki laptop yang mati total,fallback
+Tolong buatkan puisi tentang hujan,fallback
+asdfgh jkl,fallback

@@ -1,0 +1,19 @@
+
+chatbot-tematik-flask/
+
+# Python cache & virtualenv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Database & testing cache
+*.db
+.pytest_cache/
+
+# Environment & instance variables
+.env
+instance/
+
