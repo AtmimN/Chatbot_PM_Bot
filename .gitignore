@@ -16,5 +16,3 @@ env/
 # Environment & instance variables
 .env
 instance/
-
-instruction.md
